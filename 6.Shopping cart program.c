@@ -2,8 +2,7 @@
 #include <string.h>
 
 int main() {
-   setbuf(stdout, NULL);
-   
+
    //shopping cart
 
    char item[50] = "";
@@ -14,7 +13,7 @@ int main() {
 
    printf("What item would you like to buy?: ");
    fgets(item, sizeof(item), stdin);
-   item[strlen(item) - 1] = '\0';
+   item[strlen(item) - 1] = '\0'; // เอาไว้ลบช่องว่างตอนแสดงผล
 
    printf("What is the price for each?: ");
    scanf("%f", &price);
