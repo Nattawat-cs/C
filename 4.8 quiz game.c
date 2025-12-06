@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <ctype.h>
 
 int main() {
    setbuf(stdout, NULL);
@@ -24,6 +25,7 @@ int main() {
    //Ex.1
 
    char guess = '\0';
+   int score = 0;
 
    printf("*** QUIZ GAME ***\n");
 
@@ -32,8 +34,20 @@ int main() {
       printf("\n%s\n", options[i]);
       printf("Enter your choice: ");
       scanf(" %c", &guess);
+      
+      guess = toupper(guess);
+
+      if(guess == answerKey[i]){
+         printf("CORRECT!");
+         score++;
+      }
+      else{
+         printf("WRONG!");
+      }
 
    }
+
+   printf("\nYour score is %d out of %d points\n", score, 4);
 
    return 0;
 }
