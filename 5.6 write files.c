@@ -5,7 +5,7 @@ int main() {
 
    // WRITE A FILE
 
-   FILE *pFile = fopen("output.txt", "w");
+   FILE *pFile = fopen("C:\\Users\\HP\\Desktop\\output.txt", "w");
    
    char text[] = "BOOTY BOOTY BOOTY\nROCKIN EVERWHERE!";
 
