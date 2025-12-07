@@ -20,7 +20,7 @@ int main() {
 
    for(int i = 0; i < number; i++){
       printf("Enter grade #%d", i + 1);
-      scanf(" %c", grades[i]);
+      scanf(" %c", &grades[i]);
    }
 
    for(int i = 0; i < number; i++){

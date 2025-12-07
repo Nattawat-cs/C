@@ -13,7 +13,7 @@ int main() {
    printf("Enter the number of grades: ");
    scanf("%d", &number);
 
-   char *scores = calloc(number * sizeof(char));
+   int *scores = calloc(number, sizeof(int));
 
    if(scores == NULL){
       printf("Memory allocate failed!\n");
@@ -22,7 +22,7 @@ int main() {
 
    for(int i = 0; i < number; i++){
       printf("Enter score #%d", i + 1);
-      scanf(" %d", &scores[i]);
+      scanf("%d", &scores[i]);
    }
 
    for(int i = 0; i < number; i++){
