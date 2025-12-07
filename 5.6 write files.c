@@ -1,9 +1,24 @@
-// Created on iPad.
-
 #include <stdio.h>
 
 int main() {
    setbuf(stdout, NULL);
-   printf("Hello, World!");
+
+   // WRITE A FILE
+
+   FILE *pFile = fopen("output.txt", "w");
+   
+   char text[] = "BOOTY BOOTY BOOTY\nROCKIN EVERWHERE!";
+
+   if(pFile == NULL){
+      printf("Error opening file\n");
+      return 1;
+   }
+
+   fprintf(pFile, "%s", text);
+
+   printf("File was written successfully!\n");
+
+   fclose(pFile);
+
    return 0;
 }
